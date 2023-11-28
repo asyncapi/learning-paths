@@ -6,11 +6,11 @@ After getting ready and making her coffee, a glance at the clock showed her runn
 
 ### What is AsyncAPI?
 AsyncAPI provides a standard way to describe asynchronous APIs and message-driven systems using YAML or JSON format, making it easier for developers to understand and work with different messaging protocols, message formats, and event-driven architectures. 
-AsyncAPI specification can be defined using an AsyncAPI document but the document alone will not do or enforce anything. It is only when an asyncAPI document is implemented or instantiated that the specification does the magic.
-There are also many tools and code generators can take an AsyncAPI definition and automatically generate client and server code in various programming languages, saving time and reducing the potential for errors in message handling.
+AsyncAPI specification can be defined using an AsyncAPI document but the document alone will not do or enforce anything. Only when an asyncAPI document is implemented or instantiated does the specification do the magic.
+There are many tools and code generators that can take an AsyncAPI definition and automatically generate client and server code in various programming languages, saving time and reducing the potential for errors in message handling.
 
 Eve works with Adeo to understand their problem and how AsyncAPI can help them solve it. 
 
 Adeo explains their problem to Eve: Adeo is a massive logistics company spread across an entire planet consisting of various countries and currencies. As a logistics company worldwide, Adeo faces the challenge of calculating the logistics cost of a certain order from multiple sources and the difference in cost from order to order. They constantly run calculations to check which route is more cost-efficient or which yields them more profit per order. That could be 100s or 1000s of requests that need to be processed, each being processed at varying times, meaning one request would take 1 minute while another request might take 5 minutes.
 
-Eve walks them through how AsyncAPI can help them by processing the requests asynchronously, meaning the calculations(requests) will be processed simultaneously without waiting for one to complete before calculating another. This way, multiple requests are processed at once and a result(response) is sent to the appropriate user/person once the calculation is performed. 
+Eve walks them through how AsyncAPI can help them by processing the requests asynchronously, meaning the calculations(requests) will be processed simultaneously without waiting for one to complete before calculating another. This way, multiple requests are processed, and a result(response) is sent to the appropriate user/person once the calculation is performed. 
