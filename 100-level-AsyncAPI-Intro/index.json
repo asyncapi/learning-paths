@@ -1,0 +1,27 @@
+{
+    "title": "100 Level AsyncAPI Intro",
+    "description": "Introduction of AsyncAPI - 100 Level",
+    "details": {
+        "intro": {
+          "text": "intro.md"
+        },
+        "steps": [
+          {
+            "text": "step1.md"
+          },
+          {
+            "text": "step2.md"
+          },
+          {
+            "text": "step3.md"
+          }
+        ],
+        "finish": {
+          "text": "finish.md"
+        }
+      },
+      "backend": {
+        "imageid": "ubuntu"
+      }
+    }
+    
