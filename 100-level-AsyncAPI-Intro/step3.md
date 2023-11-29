@@ -51,7 +51,7 @@ operations:
   spaceMessage:
     action: send
     channel: 
-      $ref: '#/channels/lettertoEarth'
+      $ref: '#/channels/spaceMessage'
 ```
 
 This part tells his spaceship to send the message using the `spaceMessage` channel.
