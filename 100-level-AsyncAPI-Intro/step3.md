@@ -1,8 +1,8 @@
-When Chan goes back to his planet, he wants to communitcate with Eva. For communicating he needs to learn how to write AsyncAPI documentation and check if he can send a message to Eve.
+When Chan has to go back to his planet, he wants to keep talking to Eve. Eve is a bit sad that Chan is leaving, but she's also excited to try sending messages across space. They decide that Chan will learn to write AsyncAPI documents so they can stay in touch.
 
-### Writing an AsyncAPI Document from Scratch:
+### Writing an AsyncAPI Document
 
-#### Setting Up the Basics:
+#### Starting Simple
 
 Chan begins by setting up his space message plan. He writes:
 
@@ -13,15 +13,15 @@ info:
   version: 0.1.0
 ```
 
-This is like Chan saying, "I'm using the 3.0.0 space message rules, and I'm naming my plan `Sending Signal to Eve.`"
+This is like Chan saying, "I'm using the `3.0.0` space message rules, and I'm naming my plan `Sending Signal to Eve.`".
 
-#### Creating Channels and Messages
+#### Making a Message Route
 
-Chan then decides on the path his message will take to Eve. He sets up a channel, like a route in space, and names it `userSignedUp` with an address `Earth/letter`. The document looks like:
+Next, Chan picks a path for his message. He makes a channel called `spaceMessage` with the address `Earth/letter`. Now his plan looks like this:
 
 ```
 channels:
-  userSignedUp:
+  spaceMessage:
     address: Earth/letter
     messages:
       lettertoEarth:
@@ -40,27 +40,27 @@ channels:
               minimum: 18
 ```
 
-This part is like Chan detailing the contents of his message – like who it's from (full name), how to contact back (email), and making sure the receiver is old enough (age).
+Here, Chan is planning what to put in his message, like the sender's full name, their email, and their age.
 
-#### Setting Up Operations
+#### How to Send the Message
 
-Finally, Chan adds instructions for how the message should be sent. He writes:
+Last, Chan writes how to send the message:
 
 ```
 operations: 
-  userSignedUp:
+  spaceMessage:
     action: send
     channel: 
       $ref: '#/channels/lettertoEarth'
 ```
 
-This tells his spaceship that it should `send` messages through the `userSignedUp` channel.
+This part tells his spaceship to send the message using the `spaceMessage` channel.
 
-### Using AsyncAPI Tools for Validating the Document
+### Checking the Document
 
-After writing his space message plan, Chan uses a tool called AsyncAPI Studio to make sure everything is set up correctly. It's like a helper that checks his work to make sure there are no mistakes.
+Chan uses AsyncAPI Studio to make sure his message plan is good. It's like a helper to check for mistakes.
 
-To use AsyncAPI Studio, Chan would first install it using the command `npm install -g @asyncapi/studio`. Then, he would open the AsyncAPI document in the studio using the command `asyncapi studio my-document.yaml`. The studio would then check the document for errors and provide suggestions for improvements.
+He installs it with `npm install -g @asyncapi/studio` and opens his plan in the studio with `asyncapi studio my-document.yaml`. The studio looks for errors and gives tips.
 
 ### Hands-on Exercise
 
