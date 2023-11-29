@@ -62,6 +62,8 @@ Chan uses AsyncAPI Studio to make sure his message plan is good. It's like a hel
 
 He installs it with `npm install -g @asyncapi/studio` and opens his plan in the studio with `asyncapi studio my-document.yaml`. The studio looks for errors and gives tips.
 
+He also uses the Web version of [AsyncAPI Studio](https://studio.asyncapi.com/) where he can simply paste his document and be able to check if he has any error there.
+
 ### Hands-on Exercise
 
 Chan wants to practice more. He thinks about adding a new property for a username and creating a new channel for messages to Mars. He updates his document with these new details and then uses AsyncAPI Studio to validate his changes.
