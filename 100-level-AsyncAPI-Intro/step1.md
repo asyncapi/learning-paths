@@ -28,9 +28,9 @@ AsyncAPI simplifies defining how to communicate and send messages between differ
 
 AsyncAPI helps you define asynchronous APIs. But what is an asynchronous API?
 
-They are like digital mailboxes where you can send messages without waiting for an instant reply. Rather, when the other person reads your letter and has something to say, they will reply back.
+They are like digital mailboxes where you can send messages without waiting for an instant reply. Rather, when the other person reads your letter and has something to say, they will reply back. To build an EDA where certain actions(events) trigger other actions, Async API helps map out events and their response. 
 
-To build an EDA where certain actions(events) trigger other actions, Async API helps map out events and their response. For example, imagine a birthday party with events like cake cutting and gift opening. These events trigger responses, such as singing when the cake is cut or clapping while opening the gifts.
+Chan spots cake in Eve's kitchen and asks for a slice as she likes cakes. While offering her a slice, Eve gives her an example: imagine a birthday party with events like cake cutting and gift opening. These events trigger responses, such as singing when the cake is cut or clapping while opening the gifts.
 
 AsyncAPI helps you organize events that will happen, when they will happen, and how everyone should react to them. For example, when the cake is cut, AsyncAPI guides you in singing the birthday song. It also enables creating a party schedule, like cutting the cake at 6 pm and opening gifts at 7 pm.
 
