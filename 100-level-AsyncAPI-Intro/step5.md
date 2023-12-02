@@ -25,7 +25,6 @@ The fourth module focuses on hands-on experience by learning to write AsyncAPI c
 
 ## AsyncAPI tools
 
-There are different creative tools in your AsyncAPI toolkit:
 
 AsyncAPI Studio helps you design and create a blueprint for your asynchronous API. For example, you are planning a birthday party and drawing a map displaying how messages move from one friend to another.
 Async CLI (Command-Line Interface) helps you run AsyncAPI using text commands in a terminal. For example, you type “Bake the cake” in the AsyncCLI, and the CLI bakes a cake for you.
