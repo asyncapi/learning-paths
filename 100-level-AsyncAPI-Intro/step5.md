@@ -35,4 +35,4 @@ AsyncAPI Studio helps you draw your API plans, the CLI checks if everything's in
 
 - [AsyncAPI Documentation](https://www.asyncapi.com/docs/): The official documentation provides comprehensive information, examples, and guides for understanding and using AsyncAPI.
 - [AsyncAPI GitHub Repository](https://github.com/asyncapi/asyncapi): AsyncAPI GitHub - Explore the AsyncAPI GitHub repository for code samples, issues, and community contributions.
-- [AsyncAPI YouTube Tutorials](https://www.youtube.com/c/AsyncAPI): AsyncAPI YouTube - Access video tutorials covering various aspects of AsyncAPI, enhancing your learning experience.
+- [AsyncAPI YouTube](https://www.youtube.com/c/AsyncAPI): Watch AsyncAPI community meetings and learning content on our YouTube channel.
