@@ -23,7 +23,7 @@ The fourth module focuses on hands-on experience by learning to write AsyncAPI c
    1. Utilize AsyncAPI tools to validate the created documents.
    1. Engage in hands-on exercises to reinforce your understanding and skills.
 
-## AsyncAPI toolkit
+## AsyncAPI tools
 
 There are different creative tools in your AsyncAPI toolkit:
 
