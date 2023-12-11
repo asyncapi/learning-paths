@@ -1,0 +1,32 @@
+{
+    "title": "100 Level AsyncAPI Intro",
+    "description": "Introduction of AsyncAPI - 100 Level",
+    "details": {
+        "intro": {
+          "text": "intro.md",
+          "foreground": "setup_node.sh"
+        },
+        "steps": [
+          {
+            "title": "Event-Driven Architectures",
+            "text": "step1.md"
+          },
+          {
+            "title": "AsyncAPI Specification",
+            "text": "step2.md"
+          },
+          {
+            "title": "Creating and Validating AsyncAPI Code and Documents",
+            "text": "step3/text.md",
+            "background": "step3/background.sh"
+          }
+        ],
+        "finish": {
+          "text": "finish.md"
+        }
+      },
+      "backend": {
+        "imageid": "ubuntu"
+      }
+    }
+    
