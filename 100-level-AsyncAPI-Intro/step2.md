@@ -3,45 +3,51 @@
 
 - **Info (Metadata about the API):**
 
-Just as the name tag on Chan's spaceship provides essential details like the spaceship's name and model, the `info` section in AsyncAPI serves a similar purpose. It provides crucial information about the API, such as the title, version, and contact details. This metadata helps developers understand the basic details of the API they're working with.
+Just as the name tag on Chan's spaceship provides essential details like the spaceship's name and model, the `info` section in AsyncAPI serves a similar purpose. It provides crucial information about the API, such as the title, version, and description. This metadata helps developers understand the basic details of the API they're working with.
 
 ```yml
 asyncapi: '3.0.0'
 info:
   title: Space Communication API
   version: '1.0.0'
-  description: API for communication between spaceship and control room
+  description: API for communication between Chan's spaceship and Capuccinova
 ```
 
 - **Servers (Communication servers in the API):**
 
-Imagine that Chan's spaceship communicates with different parts of the universe, including Capuccinova and other regions, through various servers. In AsyncAPI, the `servers` section describes the servers our API will communicate with, including their URLs, protocols, and descriptions.
+Imagine that Chan's spaceship communicates with Eve on Capuccinova through various servers. In AsyncAPI, the `servers` section describes the servers our API will communicate with, including their hosts, protocols, and descriptions.
 
 ```yml
 servers:
   production:
-    url: mqtt://test.mosquitto.org
+    host: space.mosquitto.org
     protocol: mqtt
-    description: Production server
+    description: Production server for space communication
 ```
 
 - **Channels (Communication channels in the API):**
 
-The spaceship's radio stations, which correspond to specific topics like communicating with Capuccinova, are akin to the `channels` in AsyncAPI. These channels represent paths for sending specific types of messages. Each channel is associated with a particular topic, just as each radio station communicates with a particular planet or star.
+The spaceship's radio stations, which correspond to specific topics like communicating with Capuccinova, are simmilar to the `channels` in AsyncAPI. These channels represent paths for sending specific types of messages. Each channel uses an address, which is a template for the URI of the server, and can have variables inside curly braces.
 
 ```yml
 channels:
-  chat:
-    description: Channel for sending and receiving chat messages
+  roomidchat:
     address: chat/{roomId}
-    parameters:
-      roomId:
-        description: The ID of the chat room
-        schema:
-          type: string
-    send:
-      message:
-        $ref: '#/components/messages/ChatMessage'
+    messages:
+      chatMessage:
+        name: ChatMessage
+        payload:
+          type: object
+          properties:
+            userId:
+              type: string
+              description: The ID of the user who sent the message
+            message:
+              type: string
+              description: The chat message
+            spacename:
+              type: string
+              description: The unique spacename identifier for the message
 ```
 
 - **Tags (Categorizing operations):**
@@ -86,22 +92,12 @@ components:
 `Operations` in AsyncAPI are like the instructions for the spaceship. They define what actions can be performed within each channel, such as sending or receiving messages. Each operation is associated with a message and a schema.
 
 ```yml
-channels:
-  chat:
-    description: Channel for sending and receiving chat messages
-    address: chat/{roomId}
-    parameters:
-      roomId:
-        description: The ID of the chat room
-        schema:
-          type: string
-    send:
-      operationId: sendChatMessage
-      summary: Send a chat message
-      tags:
-        - chat
-      message:
-        $ref: '#/components/messages/ChatMessage'
+operations:
+  sendChatMessage:
+    action: 'send'
+    summary: Send a chat message to a specific room
+    channel:
+      $ref: '#/channels/roomidchat'
 ```
 - **Messages (Content of the operations):**
 
@@ -202,6 +198,7 @@ After the successful attempt, Chan is now eager to establish a new communication
    ```
 
 3. Introduce a new channel entry for Brownieterra. Ensure it includes a suitable description, address, and message structure reference. Your new channel could be structured as follows:
+
    ```yaml
    brownieterra-chat:
      description: Channel for sending messages to Brownieterra
