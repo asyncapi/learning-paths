@@ -19,7 +19,7 @@ This is like Chan saying, "I'm using the `3.0.0` space message rules, and I'm na
 
 Next, Chan picks a path for his message. He makes a channel called `spaceMessage` with the address `Earth/letter`. Now his plan looks like this:
 
-```
+```yaml
 channels:
   spaceMessage:
     address: Earth/letter
@@ -74,7 +74,9 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
 **Your Mission: Crafting Chan's First AsyncAPI Message**
 
 1. **Enter the Command Center**: Open the terminal and type `nano chan-to-eve.yaml` to start crafting an interstellar AsyncAPI document for communication with Eve.
-2. **Lay the Foundation**: Create the basic structure for Chan's communication.
+
+2. **Lay the Foundation**: Create the basic structure for Chan's communication:
+
    ```yaml
    asyncapi: 3.0.0
    info:
@@ -96,11 +98,14 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
                  type: integer
                  minimum: 18
    ```
-3. **Insert a Personal Touch**: Add a `spacename` property.
+
+3. **Insert a Personal Touch**: Add a `spacename` property:
+
    ```yaml
    spacename:
      type: string
    ```
+
 4. **Seal the Galactic Message**: Save (`Ctrl + O`, `Enter`) and exit (`Ctrl + X`).
 
 #### Chapter 2: Deepening the Cosmic Bond
@@ -108,7 +113,9 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
 **Your Mission: Enhancing the Message Structure**
 
 1. **Revisit the Command Center**: Open `chan-to-eve.yaml` again.
-2. **Add a Time Stamp**: Implement `timestamp` and `priority` fields.
+
+2. **Add a Time Stamp**: Implement `timestamp` and `priority` fields:
+
    ```yaml
    timestamp:
      type: string
@@ -116,6 +123,7 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
    priority:
      type: integer
    ```
+
 3. **Chronicle the Changes**: Save (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
 #### Chapter 3: Navigating the Starry Seas
@@ -123,7 +131,9 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
 **Your Mission: Charting the Message's Course**
 
 1. **Galactic Navigator**: Edit `chan-to-eve.yaml`.
-2. **Set the Course**: Define the sending protocol.
+
+2. **Set the Course**: Define the sending protocol:
+
    ```yaml
    operations: 
      spaceMessage:
@@ -131,6 +141,7 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
        channel: 
          $ref: '#/channels/spaceMessage'
    ```
+
 3. **Confirm the Trajectory**: Save (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
 #### Chapter 4: Expanding to Capuccinova
@@ -138,7 +149,9 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
 **Your Mission: Establishing Communication with Capuccinova**
 
 1. **New Horizons**: Create `chan-to-capuccinova.yaml` using `nano`.
+
 2. **Capuccinovan Messaging**: Craft a unique communication channel for this exotic planet.
+
 3. **Bridge the Planets**: Save your Capuccinovan communication plan (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
 #### Chapter 5: Perfecting Distant Dialogues
@@ -146,7 +159,9 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
 **Your Mission: Fine-Tuning the Capuccinova Communication Protocol**
 
 1. **Cosmic Engineer**: Open `chan-to-capuccinova.yaml`.
-2. **Refine the Connection**: Add operations details for Capuccinova.
+
+2. **Refine the Connection**: Add operations details for Capuccinova:
+
    ```yaml
    operations:
      capuccinovaMessage:
@@ -154,11 +169,13 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
        channel:
          $ref: '#/channels/capuccinovaMessage'
    ```
+
 3. **Launch the Protocol**: Save your work (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
 #### Epilogue: The Symphony of the Stars
 
 After each chapter, use **AsyncAPI Studio** to validate Chan's YAML documents, ensuring seamless communication with Eve and the new connection to Capuccinova. Your dedication and skills have not only kept a friendship alive across galaxies but also opened new interstellar pathways. The universe feels more connected thanks to your expertise in crafting these cosmic AsyncAPI communications.
 
-#### Review and Intergalactic Comparison:
-Compare your final AsyncAPI documents with Chan's original ideas to understand different communication strategies in the cosmos and solidify your understanding of AsyncAPI.
+#### Review and Intergalactic Comparison
+
+Compare your final AsyncAPI documents with Chan's original ideas to understand different communication strategies in the cosmos and review your understanding of AsyncAPI.
