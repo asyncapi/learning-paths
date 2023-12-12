@@ -133,72 +133,77 @@ components:
           description: The chat message
 ```
 
-### Hands-on Exercise: Guiding Chan's Interstellar Messages to Eve
+---
 
-Chan is determined to improve his messaging capabilities with Eve on Capuccinova. He plans to add a new property for a username and create a new channel for messages. After updating his AsyncAPI document with these new details, Chan faces some issues while trying to validate the changes in AsyncAPI Studio. He needs your help to ensure smooth communication with Eve.
+Certainly! Here's the updated hands-on exercise, guiding you through the entire process of creating and configuring Chan's AsyncAPI document for communication with Capuccinova and beyond.
 
-#### Exercise 1: Crafting the Initial Message
+### Chan's Galactic Coding Adventure: Crafting the Capuccinova Connection
 
-Chan is preparing to send his inaugural space message to Eve on Capuccinova and realizes he needs to include a `spacename` in the message format.
+#### Prologue: A New Beginning in the Stars
 
-**Your Mission:**
+Chan embarks on a mission to establish a sophisticated communication system with Eve on Capuccinova. With your expertise in AsyncAPI, you'll assist him in creating a robust AsyncAPI document from scratch.
 
-1. On the KillerCoda terminal, use the command `nano chan-to-capuccinova.yaml` to edit Chan's AsyncAPI document.
+---
 
-2. Locate the `payload` section under the `ChatMessagePayload` schema. It will look something like this:
+#### Chapter 1: Initiating the Capuccinova Communication Link
 
+**Your Mission: Creating the Base AsyncAPI Document**
+
+1. **Start the Journey**: In the KillerCoda terminal, create a new file by typing `nano chan-to-capuccinova.yaml`.
+
+2. **Lay the Cosmic Foundations**: Enter the basic AsyncAPI structure:
    ```yaml
-   ChatMessagePayload:
-     type: object
-     properties:
-       userId:
-         type: string
-         description: The ID of the user who sent the message
-       message:
-         type: string
-         description: The chat message
-   ```
+   asyncapi: 3.0.0
+   info:
+     title: Space Communication API
+     version: '1.0.0'
+     description: API for communication between Chan's spaceship and Capuccinova
 
-3. Insert a new property for the `spacename` within the payload. Your updated payload section should now include:
-   ```yaml
-   spacename:
-     type: string
-     description: The unique spacename identifier for the message
-   ```
+   servers:
+     production:
+       host: space.mosquitto.org
+       protocol: mqtt
+       description: Production server for space communication
 
-   Ensure that this new property aligns correctly and follows the structure of the existing properties.
-
-4. Save your changes and exit the editor. In Nano, do this by pressing `Ctrl + X`, then `Y` to confirm, and `Enter` to save.
-
-5. Notify Chan that his message structure is updated and he is ready to communicate with Eve on Capuccinova!
-
-### Hands-on Exercise 2: Establishing a New Channel for Messages to Brownieterra
-
-After the successful attempt, Chan is now eager to establish a new communication channel for sending messages to his home planet, Brownieterra. He's unsure about correctly configuring this new channel in his AsyncAPI document and needs your expertise to set up this vital link.
-
-**Your Mission:**
-
-1. Using the KillerCoda terminal, open Chan's AsyncAPI document with the command `nano chan-to-capuccinova.yaml`.
-
-2. Add a new channel for communication with Brownieterra. Locate the `channels` section in the document, which might look something like this:
-
-   ```yaml
    channels:
-     chat:
-       description: Channel for sending and receiving chat messages
+     roomidchat:
        address: chat/{roomId}
-       parameters:
-         roomId:
-           description: The ID of the chat room
-           schema:
-             type: string
-       send:
-         message:
-           $ref: '#/components/messages/ChatMessage'
+       messages:
+         chatMessage:
+           name: ChatMessage
+           payload:
+             type: object
+             properties:
+               userId:
+                 type: string
+                 description: The ID of the user who sent the message
+               message:
+                 type: string
+                 description: The chat message
+               spacename:
+                 type: string
+                 description: The unique spacename identifier for the message
+
+   operations:
+     sendChatMessage:
+       action: 'send'
+       summary: Send a chat message to a specific room
+       channel:
+         $ref: '#/channels/roomidchat'
    ```
+3. **Seal the Galactic Document**: Save (`Ctrl + O`, `Enter`) and exit Nano (`Ctrl + X`).
 
-3. Introduce a new channel entry for Brownieterra. Ensure it includes a suitable description, address, and message structure reference. Your new channel could be structured as follows:
+4. **Inform Chan**: Let him know that the foundation for his AsyncAPI document is set.
 
+#### Chapter 2: Expanding the Network to Brownieterra
+
+**Your Mission: Adding a New Channel and Defining Operations for Brownieterra**
+
+After successfully laying the groundwork for communication with Capuccinova, Chan is now eager to extend his AsyncAPI document to include a channel for Brownieterra.
+
+1. **Reopen the AsyncAPI Document**: Use the command `nano chan-to-capuccinova.yaml` to edit Chan's document.
+
+2. **Create a New Communication Channel**: Add a channel for Brownieterra. This includes specifying the channel name, its address, and parameters:
    ```yaml
    brownieterra-chat:
      description: Channel for sending messages to Brownieterra
@@ -208,13 +213,32 @@ After the successful attempt, Chan is now eager to establish a new communication
          description: The unique spacename identifier for Brownieterra communication
          schema:
            type: string
-     send:
-       message:
-         $ref: '#/components/messages/BrownieterraChatMessage'
    ```
 
-   Pay attention to the correct structure and adherence to AsyncAPI specifications.
+3. **Define Operations for the New Channel**: Under the `operations` section, specify how messages will be sent over the new Brownieterra channel. For example:
+   ```yaml
+   operations:
+     sendToBrownieterra:
+       action: send
+       summary: Send a message to Brownieterra
+       channel:
+         $ref: '#/channels/brownieterra-chat'
+   ```
 
-4. Save the changes in the document by pressing `Ctrl + X`, then `Y` to confirm, and `Enter` to save.
+4. **Save and Exit**: After adding the new channel and defining its operations, save your changes (`Ctrl + O`, `Enter`) and exit Nano (`Ctrl + X`).
 
-5. Inform Chan that the new channel for communication with Brownieterra is set up in his AsyncAPI document, enabling him to extend his reach beyond Capuccinova!
+5. **Inform Chan**: Let Chan know that the new channel for Brownieterra has been successfully added and configured in his AsyncAPI document.
+
+#### Chapter 3: Perfecting the Message Structure
+
+**Your Mission: Enhancing Message Formats and Payloads**
+
+Chan wants to add more details to the message payloads for more personalized communication.
+
+1. **Access the AsyncAPI File**: Edit `chan-to-capuccinova.yaml` in Nano.
+
+2. **Refine the Message Payloads**: Update the payloads to include additional properties or modify existing ones to better suit the communication needs.
+
+3. **Consolidate the Changes**: Save your modifications (`Ctrl + O`, `Enter`) and exit (`Ctrl + X`).
+
+4. **Update Chan**: Let him know that the message formats are now more detailed and well structured for both Capuccinova and Brownieterra.
