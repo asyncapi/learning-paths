@@ -1,4 +1,4 @@
-Eve, a programming genius with a knack for solving diverse problems and helping others lives at Optimists Lane 7,  [placeholder for planet]. 
+Eve, a programming genius with a knack for solving diverse problems and helping others lives at Optimists Lane 7, Capuccinova. 
 
 It's 6 a.m. on a Monday, and pleasant Lofi music goes off, waking her up.
 
