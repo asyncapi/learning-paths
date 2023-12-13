@@ -8,5 +8,5 @@ apt-get install -y -q nodejs
 
 # Install AsyncAPI CLI
 echo "Installing AsyncAPI CLI..."
-npm install -g @asyncapi/cli
+npm install -g @asyncapi/cli@0.50.0
 echo "All set!!"
