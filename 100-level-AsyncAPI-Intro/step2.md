@@ -1,9 +1,9 @@
 ## Request/reply 
-As Eve and Chan almost finish setting up the communication system, Eve explains to Chan about Request/reply pattern, which is not a component but a common communication pattern. 
+As Eve and Chan had almost finished setting up the communication system, Eve explained the request/reply pattern to Chan, which is not a component but a typical communication pattern. 
 
-Eve explains Chan that this is a type of communication pattern where there are two actors, a requestor and a replier. 
+Eve explains to Chan that this is a type of communication pattern where there are two actors, a requestor and a replier. 
 
-Here, they setup a channel called `communication`, which is a used to exchange messages, send requests asking how Eve's doing, what's she upto, general chit-chat or cool discoveries by chan as he travels around the galaxy. And the reply address as to where the response to his request needs to be delivered is known while defining the communication system.
+Here, they set up a channel called `communication`, which is used to exchange messages, send requests asking how Eve's doing, what she's up to, and general chit-chat or cool discoveries by Chan as he travels around the galaxy. The reply address where the response to his request needs to be delivered is known while defining the communication system.
 
 ```yml
 asyncapi: 3.0.0
@@ -55,9 +55,9 @@ operations:
        - $ref: "#/channels/communication/messages/confirmation"
 ```
 
-But then, Chan wonders how would Eve be able to reach him if in case he is travelling around and his address(reply address) is not known. 
+But then, Chan wonders how Eve could reach him if he is travelling around and his address(reply address) is not known. 
 
-That is when Eve teaches Chan how they setup a communication system and stay in touch even when the reply address is not known at the time of design. 
+That is when Eve teaches Chan how to set up a communication system and stay in touch even when the reply address is not known at the time of design. 
 
 ```yaml 
 channels:
@@ -119,6 +119,6 @@ operations:
        - $ref: "#/channels/communication/messages/confirmation"
 ```
 
-With the final pieces programmed and the communication system in place, Chan gets ready to get back home. 
+With the final pieces programmed and the communication system in place, Chan gets ready to return home. 
 
-Making a promise to stay in touch, Chan takes off in his spaceship back to Brownieterra
+Making a promise to stay in touch, Chan takes off in his spaceship back to Brownieterra.
