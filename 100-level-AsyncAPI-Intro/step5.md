@@ -1,4 +1,4 @@
-In this learning journey, you explore Async API, a powerful tool for crafting asynchronous APIs. The first module discusses what AsyncAPI is and why to use Async API and explores real-world use cases where AsyncAPI is a valuable asset.
+In this learning journey, you explore AsyncAPI, a powerful tool for crafting asynchronous APIs. The first module discusses what AsyncAPI is and why to use AsyncAPI and explores real-world use cases where AsyncAPI is a valuable asset.
 
 Building on the basics, module two transitions into understanding Event-driven Architecture(EDA), showcasing how AsyncAPI fuels the design of both EDA and microservices.
 
@@ -10,7 +10,7 @@ The fourth module focuses on hands-on experience by learning to write AsyncAPI c
 
 AsyncAPI Studio helps you design and create a blueprint for your asynchronous API. For example, drawing a map displaying how to exchange messages between two teams.
 
-Async CLI (Command-Line Interface) helps you run AsyncAPI using text commands in a terminal. For example, you type “Bake the cake” in the AsyncCLI, and the CLI bakes a cake for you.
+AsyncAPI CLI (Command-Line Interface) helps you run AsyncAPI using text commands in a terminal. For example, you type “Bake the cake” in the AsyncAPI CLI, and the AsyncAPI CLI bakes a cake for you.
 
 Generator helps you plan and build the initial structure of your project. For example, It's like having an assistant who sets up the starting point of your birthday party.
 
