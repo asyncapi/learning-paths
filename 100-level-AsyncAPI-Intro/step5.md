@@ -1,6 +1,6 @@
 In this learning journey, you explore Async API, a powerful tool for crafting asynchronous APIs. The first module discusses what AsyncAPI is and why to use Async API and explores real-world use cases where AsyncAPI is a valuable asset.
 
-Building on the basics, module two transitions into understanding Event-driven Architecture(EDA), showcasing how AsyncAPI fuels the design of both EDA and microservices.
+Building on the basics, module two transitions into understanding Event-driven Architecture (EDA), showcasing how AsyncAPI fuels the design of both EDA and microservices.
 
 The third module explores the AsyncAPI specifications. You learn about the structure of AsyncAPI and its different components, such as info, channels, components, and tags. You also learn to define operations, messages, and schemas and grasp the request/reply patterns within AsyncAPI.
 
