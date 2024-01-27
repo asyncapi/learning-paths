@@ -11,6 +11,7 @@ info:
   title: Space Communication API
   version: '1.0.0'
   description: API for communication between Chan's spaceship and Capuccinova
+```
 
 - **Servers**
 
@@ -22,6 +23,7 @@ servers:
     host: space.mosquitto.org
     protocol: mqtt
     description: Production server for space communication
+```
 
 - **Channels**
 
@@ -46,6 +48,7 @@ channels:
             spacename:
               type: string
               description: The unique spacename identifier for the message
+```
 
 - **Tags**
 
@@ -55,6 +58,7 @@ channels:
 tags:
   - name: chat
     description: Operations related to chat
+```
 
 - **Components**
 
@@ -79,6 +83,7 @@ components:
         message:
           type: string
           description: The chat message
+```
 
 ## Operations, messages, and schemas
 
@@ -93,6 +98,8 @@ operations:
     summary: Send a chat message to a specific room
     channel:
       $ref: '#/channels/roomidchat'
+```
+
 - **Messages**
 
 `Messages` in AsyncAPI are the content exchanged during operations, just like the words Eve from Capuccinova and Chan from Brownieterra use to communicate. They describe the structure and content of the messages sent or received.
@@ -107,6 +114,7 @@ components:
       contentType: application/json
       payload:
         $ref: '#/components/schemas/ChatMessagePayload'
+```
 
 - **Schemas**
 
@@ -124,11 +132,12 @@ components:
         message:
           type: string
           description: The chat message
+```
 
 Now it's time to help Chan establish a sophisticated communication system with Eve on Capuccinova. With your new expertise in AsyncAPI, you'll assist him in creating an AsyncAPI document from scratch.
 
 
-#### Exercise 1: Create AsyncAPI document
+#### Exercise 1: Create an AsyncAPI document
 
 
 1. In the KillerCoda terminal, create a new file by typing `nano chan-to-capuccinova.yaml`.
@@ -189,3 +198,4 @@ After successfully laying the groundwork for communication with Capuccinova, Cha
          description: The unique spacename identifier for Brownieterra communication
          schema:
            type: string
+```
