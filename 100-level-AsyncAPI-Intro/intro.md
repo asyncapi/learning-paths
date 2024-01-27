@@ -2,7 +2,7 @@ Eve is a programming genius renowned for her ability to solve various technical 
 
 The clock strikes 6 a.m. on a Monday, and the gentle notes of Lofi music gently rouse her from slumber.
 
-After getting herself ready and brewing a cup of coffee, Eve casts a quick glance at the clock, only to realize that she's running behind schedule for her first work meeting with Adeo. Adeo happens to be one of the dedicated users of AsyncAPI, the organization where Eve acts as an open-source contributor!
+After getting herself ready and brewing a cup of coffee, Eve casts a quick glance at the clock, only to realize that she's running behind schedule for her first work meeting with Guild. Guild happens to be one of the dedicated users of AsyncAPI, the organization where Eve acts as an open-source contributor!
 
 ### What is AsyncAPI?
 AsyncAPI offers a standardized approach for describing asynchronous APIs and message-driven systems through YAML or JSON formats. The AsyncAPI specification makes it easier to work with diverse messaging protocols, message structures, and event-driven architectures.
@@ -12,8 +12,8 @@ The AsyncAPI specification can be defined using an AsyncAPI document, but the do
 Furthermore, the AsyncAPI ecosystem includes tools and code generators designed to take an AsyncAPI definition and automatically generate client and server code in multiple programming languages. Such functionality expedites development while significantly reducing potential errors when handling messages.
 
 ### Real-world use cases of AsyncAPI
-Eve collaborates with Adeo to address their logistics challenge using AsyncAPI. Adeo, a global logistics giant operating in multiple countries with varying currencies, faces the complex task of calculating order logistics costs and route optimization for hundreds to thousands of requests, each with varying processing times.
+Eve collaborates with Guild to address their logistics challenge using AsyncAPI. Guild, a global logistics giant operating in multiple countries with varying currencies, faces the complex task of calculating order logistics costs and route optimization for hundreds to thousands of requests, each with varying processing times.
 
-Eve introduces AsyncAPI to Adeo, explaining how it can process their requests asynchronously, enabling simultaneous calculations (requests) without waiting for one request to finish before moving on to the next. Multiple requests are processed, and a result (response) is sent to the appropriate user once the calculation is performed.
+Eve introduces AsyncAPI to Guild, explaining how it can process their requests asynchronously, enabling simultaneous calculations (requests) without waiting for one request to finish before moving on to the next. Multiple requests are processed, and a result (response) is sent to the appropriate user once the calculation is performed.
 
-Having assisted Adeo, Eve enjoys her chicken lasagna in her backyard while stargazing. Amidst the stars, she spots what initially seems like Haley's Comet but soon realizes it's something else entirely. To her shock, a spaceship crash-lands in her backyard!
+Having assisted Guild, Eve enjoys her chicken lasagna in her backyard while stargazing. Amidst the stars, she spots what initially seems like Haley's Comet but soon realizes it's something else entirely. To her shock, a spaceship crash-lands in her backyard!
