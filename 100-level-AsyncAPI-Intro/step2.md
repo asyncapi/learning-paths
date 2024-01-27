@@ -20,7 +20,7 @@ Imagine that Chan's spaceship communicates with Eve on Capuccinova through vario
 ```yml
 servers:
   production:
-    host: space.mosquitto.org
+    host: mqtt://localhost
     protocol: mqtt
     description: Production server for space communication
 ```
@@ -152,7 +152,7 @@ Now it's time to help Chan establish a sophisticated communication system with E
 
    servers:
      production:
-       host: space.mosquitto.org
+       host: mqtt://localhost
        protocol: mqtt
        description: Production server for space communication
 
