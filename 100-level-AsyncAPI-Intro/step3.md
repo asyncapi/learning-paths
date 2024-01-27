@@ -55,11 +55,7 @@ This part tells his spaceship to send the message using the `spaceMessage` chann
 
 ### Checking the Document
 
-Chan uses AsyncAPI Studio to make sure his message plan is good. It's like a helper to check for mistakes.
-
-He installs it with `npm install -g @asyncapi/studio` and opens his plan in the studio with `asyncapi studio my-document.yaml`. The studio looks for errors and gives tips.
-
-He also uses the Web version of [AsyncAPI Studio](https://studio.asyncapi.com/) where he can simply paste his document and be able to check if he has any error there.
+Chan uses [AsyncAPI Studio](https://studio.asyncapi.com/) to make sure his message plan is good. It's like a helper to check for mistakes. He can simply paste his document and be able to check if he has any error there.
 
 ---
 
