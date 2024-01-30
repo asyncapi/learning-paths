@@ -91,7 +91,7 @@ Chan uses [AsyncAPI Studio](https://studio.asyncapi.com/) to validate that his m
 
 4. Save (`Ctrl + O`, `Enter`) and exit (`Ctrl + X`).
 
-#### Exercise 2: Message structure
+## Exercise 2: Message structure
 
 1. Open `chan-to-eve.yaml` again.
 
@@ -107,7 +107,7 @@ Chan uses [AsyncAPI Studio](https://studio.asyncapi.com/) to validate that his m
 
 3.  Save your changes (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
-#### Exercise 3: Charting the Message's Course
+## Exercise 3: Charting the Message's Course
 
 1. Edit `chan-to-eve.yaml`.
 
@@ -123,7 +123,7 @@ Chan uses [AsyncAPI Studio](https://studio.asyncapi.com/) to validate that his m
 
 3. Save your changes (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
-#### Exercise 4: Establish communication with Capuccinova
+## Exercise 4: Establish communication with Capuccinova
 
 1. Create `chan-to-capuccinova.yaml` using `nano`.
 
