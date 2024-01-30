@@ -1,3 +1,3 @@
 As Eve and Chan begin building a communication system using AsyncAPI inside Chan's spaceship control room, Chan asks Eve if there is a standardized way of defining the communication system or if she defines the communication systems differently based on the particular use case.
 
-Eve replies that AsyncAPI has a standardized way of defining communication systems. She explains to Chan that the communication system is defined using the specific structure within an AsyncAPI document. As it is much easier to understand things in action, Eve shows Chan how to structure components in an AsyncAPI document.
+Eve replies that AsyncAPI has a standardized way of defining communication systems. She explains to Chan that the communication system is defined using a specific structure within an AsyncAPI document. As it is much easier to understand things in action, Eve shows Chan how to structure components in an AsyncAPI document.
