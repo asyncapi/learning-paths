@@ -1,10 +1,8 @@
-When Chan has to go back to his planet, he wants to keep talking to Eve. Eve is a bit sad that Chan is leaving, but she's also excited to try sending messages across space. They decide that Chan will learn to write AsyncAPI documents so they can stay in touch.
+When Chan has to go back to his planet, he wants to keep talking to Eve. Eve is sad that Chan is leaving, but she's also excited to try sending messages across space. They decide to write AsyncAPI documents to stay in touch.
 
-### Writing an AsyncAPI Document
+## Create an AsyncAPI Document
 
-#### Starting Simple
-
-Chan begins by setting up his space message plan. He writes:
+Chan begins by setting up his space message plan.
 
 ```
 asyncapi: 3.0.0
@@ -13,11 +11,11 @@ info:
   version: 0.1.0
 ```
 
-This is like Chan saying, "I'm using the `3.0.0` space message rules, and I'm naming my plan `Sending Signal to Eve.`".
+Essentially, Chan is saying, "I'm using the `3.0.0` space message rules, and I'm naming my plan `Sending Signal to Eve.`".
 
-#### Making a Message Route
+## Message route
 
-Next, Chan picks a path for his message. He makes a channel called `spaceMessage` with the address `Earth/letter`. Now his plan looks like this:
+Next, Chan picks a path for his message. He makes a channel called `spaceMessage` with the address `Earth/letter`. 
 
 ```yaml
 channels:
@@ -37,11 +35,11 @@ channels:
               minimum: 18
 ```
 
-Here, Chan is planning what to put in his message, like the sender's full name, and their age.
 
-#### How to Send the Message
+## Send message
 
-Last, Chan writes how to send the message:
+Last, Chan sends the message via the `spaceMessage` channel.
+
 
 ```
 operations: 
@@ -51,27 +49,16 @@ operations:
       $ref: '#/channels/spaceMessage'
 ```
 
-This part tells his spaceship to send the message using the `spaceMessage` channel.
 
-### Checking the Document
+## Validate AsyncAPI document
 
-Chan uses [AsyncAPI Studio](https://studio.asyncapi.com/) to make sure his message plan is good. It's like a helper to check for mistakes. He can simply paste his document and be able to check if he has any error there.
+Chan uses [AsyncAPI Studio](https://studio.asyncapi.com/) to validate that his messages are working. Studio is a tool that checks for mistakes. He can paste his document into Studio to validate his work.
 
----
+## Exercise 1: Chan's first AsyncAPI message
 
-### Chan's Intergalactic Communication Adventure: Your Mission on Capuccinova
+1. Open the terminal and type `nano chan-to-eve.yaml` to create an AsyncAPI document for communication with Eve.
 
-#### Prologue: A Galactic Call to Action
-
-You have been selected to assist Chan in his quest to maintain an interstellar friendship with Eve and establish a new connection with a friend on the distant planet Capuccinova. Your knowledge in AsyncAPI will be crucial in bridging these cosmic distances.
-
-#### Chapter 1: The Genesis of a Space Saga
-
-**Your Mission: Crafting Chan's First AsyncAPI Message**
-
-1. **Enter the Command Center**: Open the terminal and type `nano chan-to-eve.yaml` to start crafting an interstellar AsyncAPI document for communication with Eve.
-
-2. **Lay the Foundation**: Create the basic structure for Chan's communication:
+2. Create the basic structure for Chan's communication:
 
    ```yaml
    asyncapi: 3.0.0
@@ -95,22 +82,20 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
                  minimum: 18
    ```
 
-3. **Insert a Personal Touch**: Add a `spacename` property:
+3. Add a `spacename` property:
 
    ```yaml
    spacename:
      type: string
    ```
 
-4. **Seal the Galactic Message**: Save (`Ctrl + O`, `Enter`) and exit (`Ctrl + X`).
+4. Save (`Ctrl + O`, `Enter`) and exit (`Ctrl + X`).
 
-#### Chapter 2: Deepening the Cosmic Bond
+#### Exercise 2: Message structure
 
-**Your Mission: Enhancing the Message Structure**
+1. Open `chan-to-eve.yaml` again.
 
-1. **Revisit the Command Center**: Open `chan-to-eve.yaml` again.
-
-2. **Add a Time Stamp**: Implement `timestamp` and `priority` fields:
+2. Add `timestamp` and `priority` fields:
 
    ```yaml
    timestamp:
@@ -120,15 +105,13 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
      type: integer
    ```
 
-3. **Chronicle the Changes**: Save (`Ctrl + O`, `Enter`, `Ctrl + X`).
+3.  Save your changes (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
-#### Chapter 3: Navigating the Starry Seas
+#### Exercise 3: Charting the Message's Course
 
-**Your Mission: Charting the Message's Course**
+1. Edit `chan-to-eve.yaml`.
 
-1. **Galactic Navigator**: Edit `chan-to-eve.yaml`.
-
-2. **Set the Course**: Define the sending protocol:
+2. Define the sending protocol:
 
    ```yaml
    operations: 
@@ -138,25 +121,13 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
          $ref: '#/channels/spaceMessage'
    ```
 
-3. **Confirm the Trajectory**: Save (`Ctrl + O`, `Enter`, `Ctrl + X`).
+3. Save your changes (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
-#### Chapter 4: Expanding to Capuccinova
+#### Exercise 4: Establish communication with Capuccinova
 
-**Your Mission: Establishing Communication with Capuccinova**
+1. Create `chan-to-capuccinova.yaml` using `nano`.
 
-1. **New Horizons**: Create `chan-to-capuccinova.yaml` using `nano`.
-
-2. **Capuccinovan Messaging**: Craft a unique communication channel for this exotic planet.
-
-3. **Bridge the Planets**: Save your Capuccinovan communication plan (`Ctrl + O`, `Enter`, `Ctrl + X`).
-
-#### Chapter 5: Perfecting Distant Dialogues
-
-**Your Mission: Fine-Tuning the Capuccinova Communication Protocol**
-
-1. **Cosmic Engineer**: Open `chan-to-capuccinova.yaml`.
-
-2. **Refine the Connection**: Add operations details for Capuccinova:
+2. Add operations details for Capuccinova:
 
    ```yaml
    operations:
@@ -166,12 +137,8 @@ You have been selected to assist Chan in his quest to maintain an interstellar f
          $ref: '#/channels/capuccinovaMessage'
    ```
 
-3. **Launch the Protocol**: Save your work (`Ctrl + O`, `Enter`, `Ctrl + X`).
+3. Save your work (`Ctrl + O`, `Enter`, `Ctrl + X`).
 
-#### Epilogue: The Symphony of the Stars
+## Test your work
 
-After each chapter, use **AsyncAPI Studio** to validate Chan's YAML documents, ensuring seamless communication with Eve and the new connection to Capuccinova. Your dedication and skills have not only kept a friendship alive across galaxies but also opened new interstellar pathways. The universe feels more connected thanks to your expertise in crafting these cosmic AsyncAPI communications.
-
-#### Review and Intergalactic Comparison
-
-Compare your final AsyncAPI documents with Chan's original ideas to understand different communication strategies in the cosmos and review your understanding of AsyncAPI.
+After each exercise, use **AsyncAPI Studio** to validate Chan's YAML documents. After all, you want to ensure seamless communication with Eve and the new connection to Capuccinova! Thanks to you, Eve and Chan can now keep their friendship alive by communicating across galaxies. 
