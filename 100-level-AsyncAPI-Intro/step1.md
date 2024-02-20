@@ -8,7 +8,7 @@ Eve begins by providing Chan with a comprehensive explanation of event-driven ar
 
 An event signifies a change in the system's state that triggers communication between different services. Event-driven architecture (EDA) decomposes an application into several components interacting via events. These components encompass event producers and consumers:
 
-- An event **producer** identifies an event and transmits relevant information through the event channel.
+- An event **producer** identifies an event and sends relevant information through the event channel.
 - An event **consumer** subscribes to an event channel to receive and process event data.
 
 Each component can fulfill the role of an event producer, consumer, or both.
