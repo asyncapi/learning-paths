@@ -17,4 +17,4 @@ Ready to explore more of the AsyncAPI world? Check out the AsyncAPI tool ecosyst
 ## Extra resources
 
 * [AsyncAPI Documentation](https://www.asyncapi.com/docs/): The official documentation provides comprehensive examples and context for learning AsyncAPI.
-* [AsyncAPI GitHub Repository](https://github.com/asyncapi#-join-asyncapi-community): Join the AsyncAPI community and start contributing.
+* [AsyncAPI Community GitHub Repository](https://github.com/asyncapi#-join-asyncapi-community): Join the AsyncAPI community and start contributing.
