@@ -15,7 +15,7 @@ Each component can fulfill the role of an event producer, consumer, or both.
 
 As Eve continues her conversation with Chan, she realizes she hasn't offered him a beverage. She quickly rushes to prepare a cup of coffee. While making the coffee, she draws upon a coffee shop as an analogy: a customer (producer) places an order for an espresso (event), conveying the order details to the barista (consumer). The sequence unfolds as follows:
 
-1. The customer initiates an espresso order (an event), and the barista receives the order details.
+1. The customer initiates an espresso order (an event), and the barista (the event consumer) receives the order details.
 2. Subsequently, the barista processes the order and begins crafting the espresso (a response to the event).
 
 In this coffee shop scenario, event-driven architecture mirrors the seamless flow of orders and drinks without any disruption, ensuring a smooth and efficient operation.
