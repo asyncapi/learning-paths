@@ -25,7 +25,7 @@ Chan asks Eve how the AsyncAPI specification impacts the event-driven architectu
 
 AsyncAPI simplifies the definition of communication and message exchange among different components in an Event-Driven Architecture (EDA). It provides a structured way to describe events, channels, and message formats, enhancing overall understanding.
 
-AsyncAPI helps you define asynchronous APIs. Asynchronous APIs are like digital mailboxes where you can send messages without waiting for an instant reply. When the other person reads your letter and has something to say, they will reply. AsyncAPI maps out events and their responses in an EDA.
+AsyncAPI helps you define asynchronous APIs. Asynchronous APIs are like digital mailboxes where you can send messages without waiting for an instant reply. When the other person reads your letter and has something to say, they will reply. AsyncAPI maps out events, their communication channels, and the responses in an EDA.
 
 Chan spots cake in Eve's kitchen and asks for a slice as she likes cakes. While offering her a slice, Eve gives an example: imagine a birthday party with events like cake cutting and gift opening. These events trigger responses, such as singing during the cake-cutting or clapping while opening the gifts.
 
