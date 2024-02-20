@@ -15,7 +15,7 @@ Each component can act as an event producer, consumer, or both.
 
 Eve then remembers that she didn't offer Chan a beverage. So, she quickly rushes to make a cup of coffee for Chan. While making coffee, Eve considers a coffee shop as an example: a customer(producer) requests an espresso(event), communicating order details to the barista(consumer). The following process happens,
 
-1. The customer orders an espresso(an event), and the barista receives the order details.
+1. The customer (event producer) orders an espresso (an event), and the barista (event consumer) receives the order details.
 1. The barista then processes the order and starts making an espresso(a response to an event).
 
 So, event-driven architecture in a coffee shop is like the seamless flow of orders and drinks without everything stopping for one specific thing. It keeps things moving smoothly.
@@ -36,7 +36,7 @@ Async API helps map out events and their response in an EDA.
 
 Chan spots cake in Eve's kitchen and asks for a slice as she likes cakes. While offering her a slice, Eve gives her an example: imagine a birthday party with events like cake cutting and gift opening. These events trigger responses, such as singing during the cake cutting or clapping while opening the gifts.
 
-AsyncAPI helps organize events, determining when they'll occur and how everyone should react. For example, during the cake cutting, AsyncAPI guides in singing the birthday song. It also enables the creation of a party schedule, like cutting the cake at 6 pm and opening gifts at 7 pm.
+AsyncAPI helps organize events, for example, during the cake cutting, AsyncAPI guides in singing the birthday song. It also enables the creation of a party schedule, like cutting the cake at 6 pm and opening gifts at 7 pm.
 
 Here are reasons why using AsyncAPI enhances EDA design:
 
@@ -50,12 +50,8 @@ Eve further assists Chan in understanding how AsyncAPI can enhance communication
 
 In a microservices architecture, each microservice represents a specific function. Different microservices communicate using events, much like teams collaborating on tasks. For example, one team handles baking the birthday cake, while another focuses on decorating the room. These teams must communicate to share their progress.
 
-AsyncAPI helps different microservices communicate with each other. For microservices to talk to each other, they would have to:
+AsyncAPI helps different microservices communicate with each other. For microservices to talk to each other, they would have to define how to send and receive messages.
 
-* Define how to send and receive messages
-* Schedule when to send these messages
-* Ensure consistent language in messages
-
-AsyncAPI ensures that each microservice knows what information it will receive, how it will receive it, and what it should do with it. AsyncAPI helps document interactions between microservices for developers developer understanding and integration.
+AsyncAPI ensures that each microservice knows what information it will receive and how it will receive it. AsyncAPI helps document interactions between microservices for developers developer understanding and integration.
 
 Now, with coffee in hand, Eve and Chan are ready to step into Chan's spaceship to enhance its communication system.
