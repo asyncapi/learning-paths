@@ -30,11 +30,11 @@ servers:
 
 - **Channels**
 
-The spaceship's radio stations, which correspond to specific topics like communicating with Capuccinova, are similar to the `channels` in AsyncAPI. These channels represent paths for sending specific types of messages. Each channel uses an address, which is a template for the URL of the server, and can have variables inside curly braces.
+The spaceship's radio stations, which correspond to specific topics like communicating with Capuccinova, are similar to the `channels` in AsyncAPI. These channels represent paths for sending specific types of messages. Each channel uses an address, which is a template for the URL of the server, and can have parameters inside curly braces that can be replaced dynamically at runtime.
 
 ```yml
 channels:
-  roomidchat:
+  chatRoom:
     address: chat/{roomId}
     messages:
       chatMessage:
@@ -92,7 +92,7 @@ components:
 
 - **Operations**
 
-`Operations` in AsyncAPI are like the instructions for the spaceship. They define what actions can be performed within each channel, such as sending or receiving messages. Each operation is associated with a message and a schema.
+`Operations` in AsyncAPI are like the instructions for the spaceship. They define what actions can be performed within each channel, such as sending or receiving messages. Each operation is associated with a channel and its messages.
 
 ```yml
 operations:
