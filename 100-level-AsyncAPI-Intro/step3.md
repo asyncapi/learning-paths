@@ -4,7 +4,7 @@ When Chan has to go back to his planet, he wants to keep talking to Eve. Eve is 
 
 Chan begins by setting up his space message plan.
 
-```
+```yaml
 asyncapi: 3.0.0
 info:
   title: Sending Signal to Eve
@@ -35,13 +35,11 @@ channels:
               minimum: 18
 ```
 
-
 ## Send message
 
 Last, Chan sends the message via the `spaceMessage` channel.
 
-
-```
+```yaml
 operations: 
   spaceMessage:
     action: send
@@ -49,10 +47,25 @@ operations:
       $ref: '#/channels/spaceMessage'
 ```
 
-
 ## Validate AsyncAPI document
 
 Chan uses [AsyncAPI Studio](https://studio.asyncapi.com/) to validate that his messages are working. Studio is a tool that checks for mistakes. He can paste his document into Studio to validate his work.
+
+## Generator
+
+Generator automatically writes code in different languages based on Chan's blueprint, saving him time and effort to focus on the real message.
+
+* Install Generator:
+
+```bash
+npm install -g @asyncapi/generator
+```
+
+* Generate code from your AsyncAPI file: 
+
+```bash
+asyncapi generate fromFile my-api.yaml
+```
 
 ## Exercise 1: Chan's first AsyncAPI message
 
