@@ -24,7 +24,7 @@ Chan asks Eve how the AsyncAPI specification impacts the event-driven architectu
 
 ## Event-driven architecture with AsyncAPI
 
-AsyncAPI simplifies the definition of communication and message exchange among different components in an Event-Driven Architecture (EDA). It provides a structured way to describe events, channels, and message formats, enhancing overall understanding.
+AsyncAPI simplifies defining communication and message exchange among different components in an Event-Driven Architecture (EDA). It structures the description of events, channels, and message formats, enhancing overall understanding. Essentially, AsyncAPI serves as a contract, formalizing agreements between system components on message structure, event communication, and channel usage.
 
 AsyncAPI helps you define asynchronous APIs. Asynchronous APIs are like digital mailboxes where you can send messages without waiting for an instant reply. When the other person reads your letter and has something to say, they will reply. AsyncAPI maps out events, their communication channels, and the responses in an EDA.
 
