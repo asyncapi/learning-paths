@@ -9,9 +9,9 @@ The fourth module focuses on hands-on experience with exercises for writing Asyn
 ## AsyncAPI tools
 Ready to explore more of the AsyncAPI world? Check out the AsyncAPI tool ecosystem!
 
-- AsyncAPI Studio helps you design and create a blueprint for your asynchronous API. 
-- AsyncAPI CLI (Command-Line Interface) helps you run AsyncAPI using text commands in a terminal.
-- AsyncAPI Generator helps you plan and build the initial structure of your project. 
+- [AsyncAPI Studio](https://github.com/asyncapi/studio) helps you design and create a blueprint for your asynchronous API. 
+- [AsyncAPI CLI](https://github.com/asyncapi/cli) helps you run AsyncAPI using text commands in a terminal.
+- [AsyncAPI Generator](https://github.com/asyncapi/generator) helps you plan and build the initial structure of your project. 
 - And more!
 
 ## Extra resources
