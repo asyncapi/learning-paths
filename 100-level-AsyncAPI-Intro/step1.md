@@ -13,10 +13,11 @@ An event signifies a change in the system's state that triggers communication be
 
 Each component can fulfill the role of an event producer, consumer, or both.
 
-As Eve continues her conversation with Chan, she realizes she hasn't offered him a beverage. She quickly rushes to prepare a cup of coffee. While making the coffee, she draws upon a coffee shop as an analogy: a customer (producer) places an order for an espresso (event), conveying the order details to the barista (consumer). The sequence unfolds as follows:
+As Eve continues her conversation with Chan, she realizes she hasn't yet offered him a beverage. She decides to make a cup of coffee and uses the concept of a coffee shop as an analogy for asynchronous communication:
 
-1. The customer (event producer) orders an espresso (an event), and the barista (event consumer) receives the order details.
-1. The barista then processes the order and starts making an espresso(a response to an event).
+1. A customer (producer) orders an espresso (event) and pays for it, akin to sending a message in an asynchronous system. 
+1. After paying, the customer moves to a separate area, such as a table or the waiting zone, freeing up the queue. This separation of order placement and fulfillment zones mirrors the decoupling in asynchronous transactions.
+1. The barista (consumer) processes the order and, once the espresso is prepared, delivers it to the customer at their table or calls the customer by name to collect it from the counter. This step signifies the completion of the asynchronous process, where the response (the prepared coffee) is received without the customer actively waiting at the counter.
 
 In this coffee shop scenario, event-driven architecture mirrors the seamless flow of orders and drinks without any disruption, ensuring a smooth and efficient operation.
 Chan asks Eve how the AsyncAPI specification impacts the event-driven architecture world.
