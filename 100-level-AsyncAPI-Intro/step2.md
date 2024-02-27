@@ -18,7 +18,7 @@ info:
 
 - **Servers**
 
-Imagine that Chan's spaceship communicates with Eve on Capuccinova through various servers. In AsyncAPI, the `servers` section describes the servers our API will communicate with, including their hosts, protocols, and descriptions.
+Imagine that Chan's spaceship communicates with Eve on Capuccinova through various servers.  In AsyncAPI, the `servers` section serves to describe both the servers that the application of the API communicates with and the servers that the application itself exposes, such as a websocket interface or HTTP Rest.
 
 ```yml
 servers:
@@ -35,7 +35,7 @@ The spaceship's radio stations, which correspond to specific topics like communi
 ```yml
 channels:
   chatRoom:
-    address: chat/{roomId}
+    address: chat
     messages:
       chatMessage:
         name: ChatMessage
@@ -53,40 +53,6 @@ channels:
               description: The unique spacename identifier for the message
 ```
 
-- **Tags**
-
-`Tags` in AsyncAPI are like the labels on the spaceship's control panel. They help categorize different operations, making it easier to understand what each part of the API does. Each tag consists of a name and an optional description.
-
-```yml
-tags:
-  - name: chat
-    description: Operations related to chat
-```
-
-- **Components**
-
-`Component` is like the toolbox in Chan's spaceship. It contains reusable parts like message definitions and schemas that can be used across the API. Each component is linked to a particular schema, which describes the structure of the message content.
-
-```yml
-components:
-  messages:
-    ChatMessage:
-      name: ChatMessage
-      title: Chat Message
-      contentType: application/json
-      payload:
-        $ref: '#/components/schemas/ChatMessagePayload'
-  schemas:
-    ChatMessagePayload:
-      type: object
-      properties:
-        userId:
-          type: string
-          description: The ID of the user who sent the message
-        message:
-          type: string
-          description: The chat message
-```
 
 ## Operations, messages, and schemas
 
@@ -112,8 +78,6 @@ operations:
 components:
   messages:
     ChatMessage:
-      name: ChatMessage
-      title: Chat Message
       contentType: application/json
       payload:
         $ref: '#/components/schemas/ChatMessagePayload'
@@ -121,7 +85,7 @@ components:
 
 - **Schemas**
 
-`Schemas` in AsyncAPI are like the blueprints for the spaceship. They define the structure of the message content, ensuring that everything fits together correctly. Each schema is associated with a component and describes the structure and content of the messages.
+`Schemas` in AsyncAPI are like the blueprints for the spaceship. They allows the definition of input and output data types.
 
 ```yml
 components:
@@ -137,7 +101,29 @@ components:
           description: The chat message
 ```
 
+- **Components**
 
+`Component` is like the toolbox in Chan's spaceship. It contains a set of reusable objects for different aspects of the AsyncAPI specification. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
+
+```yml
+components:
+  messages:
+    ChatMessage:
+      name: ChatMessage
+      title: Chat Message
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/ChatMessagePayload'
+  schemas:
+    ChatMessagePayload:
+      type: object
+      properties:
+        userId:
+          type: string
+          description: The ID of the user who sent the message
+        message:
+          type: string
+          description: The chat message
 ## Request/reply 
 As Eve and Chan near the completion of their communication system setup, Eve takes a moment to elaborate on the request/reply pattern to Chan, emphasizing that it is a communication pattern rather than a separate component.
 
