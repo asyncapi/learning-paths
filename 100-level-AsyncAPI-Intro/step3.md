@@ -151,7 +151,3 @@ asyncapi generate fromFile my-api.yaml
    ```
 
 3. Save your work (`Ctrl + O`, `Enter`, `Ctrl + X`).
-
-## Test your work
-
-After each exercise, use **AsyncAPI Studio** to validate Chan's YAML documents. After all, you want to ensure seamless communication with Eve and the new connection to Capuccinova! Thanks to you, Eve and Chan can now keep their friendship alive by communicating across galaxies. 
